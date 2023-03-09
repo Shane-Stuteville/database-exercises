@@ -23,4 +23,4 @@ LIMIT and OFFSET can be used to create multiple pages of data. What is the relat
 OFFSET (number of results to skip), LIMIT (number of results per page), and the page number? */
 -- Offset will begin displaying the results into the count and limit will adjust the quantity of returned results
 SELECT * FROM employees
-ORDER BY last_name DESC LIMIT 5 OFFSET 50;
+ORDER BY last_name DESC LIMIT 5 OFFSET 45;
