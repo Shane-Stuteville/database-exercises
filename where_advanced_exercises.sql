@@ -45,8 +45,16 @@ WHERE MONTH(birth_date) = 12 AND DAY(birth_date) = 25;
 
 -- 10. Find all current or previous employees hired in the 90s and born on Christmas. 
 -- Enter a comment with top three employee numbers.
-
+SELECT * FROM employees
+WHERE birth_date LIKE '%-12-25' AND hire_date BETWEEN '1990-01-01' AND '1999-12-31';
 
 -- 11. Find all unique last names that have a 'q' in their last name.
+SELECT DISTINCT last_name 
+FROM employees 
+WHERE LOWER(last_name) LIKE '%q%';
 
 -- 12. Find all unique last names that have a 'q' in their last name but not 'qu'.
+SELECT DISTINCT last_name 
+FROM employees 
+WHERE LOWER(last_name) 
+LIKE '%q%' AND LOWER(last_name) NOT LIKE '%qu%';
