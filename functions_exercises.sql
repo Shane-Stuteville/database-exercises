@@ -65,5 +65,5 @@ SELECT
         '_',
         MONTH(birth_date),
         SUBSTR(YEAR(birth_date), -2))
-	AS username
+	AS username, first_name, last_name, birth_date
 FROM employees;
